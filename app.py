@@ -24,7 +24,8 @@ def prediction():
     model = joblib.load("dbs.jl")
     # make prediction
     pred = model.predict([[q]])
-    return(render_template("prediction.html",r=pred))
+
+    return(render_template("prediction.html",r=(-50.6*q)+90.2))
 
 if __name__ == "__main__":
     app.run()
